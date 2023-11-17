@@ -40,11 +40,11 @@ public class ObjectPool<T extends ObjectPool.Poolable> {
      * Returns an ObjectPool instance, of a given starting capacity, that recycles instances of a given Poolable object.
      *
      * @param withCapacity A positive integer value.
-     * @param object An instance of the object that the pool should recycle.
+     * @param object       An instance of the object that the pool should recycle.
      * @return
      */
-    public static synchronized ObjectPool create(int withCapacity, Poolable object){
-        ObjectPool result = new ObjectPool(withCapacity, object);
+    public static synchronized <T extends Poolable> ObjectPool<T> create(int withCapacity, T object) {
+        ObjectPool<T> result = new ObjectPool<>(withCapacity, object);
         result.poolId = ids;
         ids++;
 

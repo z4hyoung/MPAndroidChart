@@ -805,7 +805,7 @@ public class LineChartRenderer extends LineRadarRenderer {
 
             for (int i = 0; i < colorCount; i++) {
 
-                Bitmap.Config conf = Bitmap.Config.ARGB_4444;
+                Bitmap.Config conf = Bitmap.Config.ARGB_8888;
                 Bitmap circleBitmap = Bitmap.createBitmap((int) (circleRadius * 2.1), (int) (circleRadius * 2.1), conf);
 
                 Canvas canvas = new Canvas(circleBitmap);

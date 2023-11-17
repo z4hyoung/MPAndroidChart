@@ -18,6 +18,8 @@ import com.github.mikephil.charting.utils.MPPointF;
 
 import java.lang.ref.WeakReference;
 
+import androidx.core.content.ContextCompat;
+
 /**
  * View that can be displayed when selecting values in the chart. Extend this class to provide custom layouts for your
  * markers.
@@ -45,14 +47,7 @@ public class MarkerImage implements IMarker {
     public MarkerImage(Context context, int drawableResourceId) {
         mContext = context;
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-        {
-            mDrawable = mContext.getResources().getDrawable(drawableResourceId, null);
-        }
-        else
-        {
-            mDrawable = mContext.getResources().getDrawable(drawableResourceId);
-        }
+        ContextCompat.getDrawable(mContext, drawableResourceId);
     }
 
     public void setOffset(MPPointF offset) {

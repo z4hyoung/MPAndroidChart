@@ -15,6 +15,8 @@ import com.github.mikephil.charting.utils.Utils;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.core.content.ContextCompat;
+
 public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet {
 
     /**
@@ -334,7 +336,7 @@ public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet
         clrs.clear();
 
         for (int color : colors) {
-            clrs.add(c.getResources().getColor(color));
+            clrs.add(ContextCompat.getColor(c, color));
         }
 
         mCircleColors = clrs;

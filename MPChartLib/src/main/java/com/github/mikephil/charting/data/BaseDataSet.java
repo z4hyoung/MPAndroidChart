@@ -16,6 +16,8 @@ import com.github.mikephil.charting.utils.Utils;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.core.content.ContextCompat;
+
 /**
  * Created by Philipp Jahoda on 21/10/15.
  * This is the base dataset of all DataSets. It's purpose is to implement critical methods
@@ -190,7 +192,7 @@ public abstract class BaseDataSet<T extends Entry> implements IDataSet<T> {
         mColors.clear();
 
         for (int color : colors) {
-            mColors.add(c.getResources().getColor(color));
+            mColors.add(ContextCompat.getColor(c, color));
         }
     }
 

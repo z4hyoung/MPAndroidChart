@@ -89,24 +89,24 @@ public class ColorTemplate {
         return (color & 0xffffff) | ((alpha & 0xff) << 24);
     }
 
-    /**
-     * turn an array of resource-colors (contains resource-id integers) into an
-     * array list of actual color integers
-     *
-     * @param r
-     * @param colors an integer array of resource id's of colors
-     * @return
-     */
-    public static List<Integer> createColors(Resources r, int[] colors) {
-
-        List<Integer> result = new ArrayList<Integer>();
-
-        for (int i : colors) {
-            result.add(r.getColor(i));
-        }
-
-        return result;
-    }
+//    /**
+//     * turn an array of resource-colors (contains resource-id integers) into an
+//     * array list of actual color integers
+//     *
+//     * @param r
+//     * @param colors an integer array of resource id's of colors
+//     * @return
+//     */
+//    public static List<Integer> createColors(Resources r, int[] colors) {
+//
+//        List<Integer> result = new ArrayList<Integer>();
+//
+//        for (int i : colors) {
+//            result.add(r.getColor(i));
+//        }
+//
+//        return result;
+//    }
 
     /**
      * Turns an array of colors (integer color values) into an ArrayList of
